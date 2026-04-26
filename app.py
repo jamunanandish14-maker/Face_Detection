@@ -1,17 +1,17 @@
 import streamlit as st
 import numpy as np
-from keras.models import load_model
+import tensorflow as tf
 from PIL import Image
 import os
 import urllib.request
 
-MODEL_URL = "https://www.kaggle.com/code/jamunanandish/notebook3cbdc9044e"
+MODEL_URL = "PASTE_MODEL_LINK_HERE"
 MODEL_PATH = "face_mask_model.h5"
 
 if not os.path.exists(MODEL_PATH):
     urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
 
-model = load_model("face_mask_model.h5")
+model = tf.keras.models.load_model(MODEL_PATH)
 
 st.title("Face Mask Detection")
 
