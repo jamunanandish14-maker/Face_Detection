@@ -5,7 +5,7 @@ from PIL import Image
 import os
 import urllib.request
 
-MODEL_URL = "PASTE_KAGGLE_FILE_LINK_HERE"
+MODEL_URL = "https://www.kaggle.com/code/jamunanandish/notebook3cbdc9044e"
 MODEL_PATH = "face_mask_model.h5"
 
 if not os.path.exists(MODEL_PATH):
